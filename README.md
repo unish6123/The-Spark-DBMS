@@ -10,8 +10,8 @@ Online Learning Platform Database
 
 
 Entities:
-Student: StuID, UName, Password, Address, Class, EnrollDate, Active/Status, PhoneNo,  
-Instructors
-Courses
-Assessments
-Documents
+Student: StuID, UName, Password, Address, Class, EnrollDate, Active/Status, PhoneNo <br/>
+Instructors <br/>
+Courses <br/>
+Assessments <br/>
+Documents <br/>
