@@ -1,4 +1,4 @@
-# The Spark 
+# The Spark Dbms
 “The Spark” is a cutting-edge e-learning platform designed to broaden your learning journey. Whether you're a student eager to expand your knowledge, an instructor passionate about sharing expertise, or an organization looking to empower your workforce, The Spark has something for everyone. Before registering for courses, students must create an account on the platform. They create a username and password used to login. After providing additional information such as address and phone number, a student is officially enrolled and provided a unique Student ID. 
 Upon enrollment, students are free to register for any number of courses. The Spark has a diverse selection of courses listed on the platform. Courses are uniquely identified by a course ID. Students can see key information about the course prior to registering. Listed on the platform is the name of the course, a short description, as well as its  difficulty level so students know what to expect. Students are also able to see the name of the professor that will be teaching the course. 
 
