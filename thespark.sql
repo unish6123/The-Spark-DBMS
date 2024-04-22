@@ -24,3 +24,11 @@ values (4, 'John Smith', 'qwerty123', '456 Oak St, Boston, MA', 2345678901);
 insert into Student 
 values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456789012);
 
+
+/* Creating Instructor Table */
+
+/* Creating Assessment Table */
+
+/* Creating Courses Table */
+
+/* Creating Payment Table */
