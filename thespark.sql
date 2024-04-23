@@ -58,6 +58,32 @@ values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, 
 /* Creating Assessment Table */
 
 /* Creating Courses Table */
+CREATE TABLE Courses
+(
+    courseID integer,
+    courseName varchar(100),
+    description varchar(255),
+    difficulty varchar(50),
+    professorName varchar(100),
+    constraint course_id_pk primary key (courseID)
+);
+
+/* Inserting sample data into the Courses table */
+insert into Courses
+values (1, 'Mathematics 101', 'Introduction to basic mathematics', 'Beginner', 'John Mill');
+
+insert into Courses
+values (2, 'Physics 201', 'Intermediate level physics course', 'Intermediate', 'William Sanchez');
+
+insert into Courses
+values (3, 'Computer Science 301', 'Advanced programming concepts', 'Advanced', 'Brianna Levine');
+
+insert into Courses
+values (4, 'Art History 101', 'Introduction to art history', 'Beginner', 'Priscilla Monroe');
+
+insert into Courses
+values (5, 'Psychology 201', 'Intermediate level psychology course', 'Intermediate', 'Joanna Gaines');
+
 
 /* Creating Payment Table */
 CREATE TABLE Invoice
