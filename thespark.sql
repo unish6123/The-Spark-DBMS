@@ -26,6 +26,34 @@ values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456
 
 
 /* Creating Instructor Table */
+CREATE TABLE Instructor
+(
+   instructorID integer,
+   instructorName varchar(40),
+   instructorQual varchar(250),
+   instructorAddress varchar(100),
+   instructorDepartment varchar(100),
+   constraint instructor_instructorID_pk primary key(instructorID)
+);
+
+insert into Instructor
+values (1, 'John Mill', 'Masters in Mathematics', '121 Bloomfield Ave, Newark, NJ', 'Mathematics');
+
+insert into Instructor
+values (2, 'Joanna Gaines', 'Masters in Biology', '12 St. James Place, Montclair, NJ', 'Biology');
+
+
+insert into Instructor
+values (3, 'William Sanchez', 'Masters in Physics', '99 Martin Ave, Caldwell, NJ', 'Physics');
+
+
+insert into Instructor
+values (4, 'Brianna Levine', 'Bachelor in Computer Information Systems', '89 1st Street, Roseville, NJ', 'Computer Science');
+
+
+insert into Instructor
+values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, NJ', 'History');
+
 
 /* Creating Assessment Table */
 
