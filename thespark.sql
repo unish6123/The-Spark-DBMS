@@ -60,3 +60,33 @@ values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, 
 /* Creating Courses Table */
 
 /* Creating Payment Table */
+CREATE TABLE Invoice
+(
+   invoiceID integer,
+   stuID integer,
+   inVoiceDate Date,
+   paymentType varchar(100),
+   creditBalance integer,
+   totalBalance integer,
+   constraint invoice_invoiceID_pk primary key(invoiceID),
+   constraint stuID_fk foreign key (stuID) references Student(stuID)
+);
+
+insert into Invoice
+values (1, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 300, 3000);
+
+insert into Invoice
+values (2, 3, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Credit', 600, 3500);
+
+
+insert into Invoice
+values (3, 4, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cash', 650, 500);
+
+
+insert into Invoice
+values (4, 1, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 790, 6000);
+
+
+insert into Invoice
+values (5, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
+
