@@ -1,4 +1,3 @@
-/* Creating Students Table */
 CREATE TABLE Student 
 (
     stuID integer,
@@ -25,7 +24,10 @@ insert into Student
 values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456789012);
 
 
+<<<<<<< HEAD
+=======
 /* Creating Instructor Table */
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
 CREATE TABLE Instructor
 (
    instructorID integer,
@@ -53,9 +55,11 @@ values (4, 'Brianna Levine', 'Bachelor in Computer Information Systems', '89 1st
 
 insert into Instructor
 values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, NJ', 'History');
+<<<<<<< HEAD
+=======
 
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
 
-/* Creating Assessment Table */
 
 /* Creating Courses Table */
 CREATE TABLE Courses
@@ -84,6 +88,36 @@ values (4, 'Art History 101', 'Introduction to art history', 'Beginner', 'Prisci
 insert into Courses
 values (5, 'Psychology 201', 'Intermediate level psychology course', 'Intermediate', 'Joanna Gaines');
 
+<<<<<<< HEAD
+    
+CREATE TABLE Assessment (
+ assessmentID integer,
+ courseID integer,
+ title varchar(255),
+ passingScore integer,
+ dueDate Date,
+ assessmentTime varchar(255),
+ constraint assessment_assessmentID_pk primary key(assessmentID),
+ constraint courseID_fk foreign key (courseID) references Courses(courseID)
+);
+
+insert into  Assessment 
+values (1001, 1, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+
+insert into  Assessment
+values  (1002, 2, 'Mid-Term',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
+
+insert into  Assessment 
+values (1003, 3, 'Quiz Basics' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+
+insert into  Assessment
+values  (1004, 4, 'Mid-Term Basics',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
+
+insert into  Assessment
+values (1005, 5, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+
+=======
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
 
 /* Creating Payment Table */
 CREATE TABLE Invoice
@@ -116,3 +150,32 @@ values (4, 1, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 790, 6000);
 insert into Invoice
 values (5, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
 
+<<<<<<< HEAD
+
+
+CREATE Table Classes(
+    stuID integer,
+    instructorID integer,
+    constraint primary key(stuID, instructorID)
+    constraint stu_fk foreign key (stuID) references Student(stuID)
+    constraint inst_fk foreign key (instructorID) references Student(instructorID)
+)
+
+CREATE Table StudentRecord(    
+    stuID integer,
+    assessmentID integer,
+    constraint primary key(stuID, assessmentID)
+    constraint stu_fk foreign key (stuID) references Student(stuID)
+    constraint assment_fk foreign key (assessmentID) references Assessment(assessmentID)
+)
+
+CREATE table Rating(
+    stuID integer,
+    courseID integer,
+    constraint primary key(stuID, courseID)
+    constraint stu_fk foreign key (stuID) references Student(stuID)
+    constraint course_fk foreign key (courseID) references Courses(courseID)
+
+)
+=======
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
