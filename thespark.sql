@@ -220,3 +220,128 @@ ALTER TABLE Rating ADD CONSTRAINT course_rating_fk foreign key (courseID) refere
 
 
 -- Invoice - Unish
+
+-- creating invoice1 table
+CREATE TABLE Invoice1
+(
+   invoiceID integer,
+   stuID integer,
+   inVoiceDate Date,
+   paymentType varchar(100),
+   creditBalance integer,
+   totalBalance integer,
+   constraint invoice_invoiceID_pk primary key(invoiceID),
+   constraint stuID_fk foreign key (stuID) references Student(stuID)
+);
+
+insert into Invoice
+values (6, 6, TO_DATE('2024/05/20', 'yyyy/mm/dd'), 'Debit', 30, 3000);
+
+insert into Invoice
+values (7, 7, TO_DATE('2024/07/20', 'yyyy/mm/dd'), 'Credit', 60, 3800);
+
+
+insert into Invoice
+values (8, 8, TO_DATE('2024/09/20', 'yyyy/mm/dd'), 'Cash', 65, 500);
+
+
+insert into Invoice
+values (9, 9, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 79, 6000);
+
+
+insert into Invoice
+values (10, 10, TO_DATE('2024/12/20', 'yyyy/mm/dd'), 'Cheque', 300, 5700);
+
+-- Creating table of 3rd invoice
+CREATE TABLE Invoice2
+(
+   invoiceID integer,
+   stuID integer,
+   inVoiceDate Date,
+   paymentType varchar(100),
+   creditBalance integer,
+   totalBalance integer,
+   constraint invoice_invoiceID_pk primary key(invoiceID),
+   constraint stuID_fk foreign key (stuID) references Student(stuID)
+);
+
+insert into Invoice
+values (11, 11, TO_DATE('2024/01/20', 'yyyy/mm/dd'), 'Debit', 304, 3089);
+
+insert into Invoice
+values (12, 12, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 60, 4087);
+
+
+insert into Invoice
+values (13, 13, TO_DATE('2024/03/02', 'yyyy/mm/dd'), 'Credit', 680, 5009);
+
+
+insert into Invoice
+values (14, 14, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 790, 6009);
+
+
+insert into Invoice
+values (15, 15, TO_DATE('2024/14/27', 'yyyy/mm/dd'), 'Cheque', 30, 5700);
+
+
+-- Creating table of 4th invoice
+CREATE TABLE Invoice3
+(
+   invoiceID integer,
+   stuID integer,
+   inVoiceDate Date,
+   paymentType varchar(100),
+   creditBalance integer,
+   totalBalance integer,
+   constraint invoice_invoiceID_pk primary key(invoiceID),
+   constraint stuID_fk foreign key (stuID) references Student(stuID)
+);
+
+insert into Invoice
+values (16, 16, TO_DATE('2023/01/20', 'yyyy/mm/dd'), 'Debit', 334, 3006);
+
+insert into Invoice
+values (17, 17, TO_DATE('2013/02/20', 'yyyy/mm/dd'), 'Credit', 400, 4000);
+
+
+insert into Invoice
+values (18, 18, TO_DATE('2012/03/02', 'yyyy/mm/dd'), 'Credit', 380, 5030);
+
+
+insert into Invoice
+values (19, 19, TO_DATE('2019/04/20', 'yyyy/mm/dd'), 'Credit', 70, 6633);
+
+
+insert into Invoice
+values (20, 20, TO_DATE('2020/14/27', 'yyyy/mm/dd'), 'Cheque', 5, 7090);
+
+-- Invoice5 table
+CREATE TABLE Invoice4
+(
+   invoiceID integer,
+   stuID integer,
+   inVoiceDate Date,
+   paymentType varchar(100),
+   creditBalance integer,
+   totalBalance integer,
+   constraint invoice_invoiceID_pk primary key(invoiceID),
+   constraint stuID_fk foreign key (stuID) references Student(stuID)
+);
+
+insert into Invoice
+values (21, 21, TO_DATE('2023/01/20', 'yyyy/mm/dd'), 'Debit', 334, 2000);
+
+insert into Invoice
+values (22, 22, TO_DATE('2013/02/20', 'yyyy/mm/dd'), 'Credit', 400, 4000);
+
+
+insert into Invoice
+values (23, 23, TO_DATE('2012/03/18', 'yyyy/mm/dd'), 'Credit', 381, 5030);
+
+
+insert into Invoice
+values (24, 24, TO_DATE('2019/01/07', 'yyyy/mm/dd'), 'Credit', 777, 6600);
+
+
+insert into Invoice
+values (25, 25, TO_DATE('2020/01/20', 'yyyy/mm/dd'), 'Cheque', 555, 7000);
