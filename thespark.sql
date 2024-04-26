@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 -- CREATE Student Table 
 
+=======
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 CREATE TABLE Student 
 (
     stuID integer,
@@ -28,6 +31,13 @@ values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456
 -- CREATE Instructor Table 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+/* Creating Instructor Table */
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 CREATE TABLE Instructor
 (
    instructorID integer,
@@ -55,8 +65,15 @@ values (4, 'Brianna Levine', 'Bachelor in Computer Information Systems', '89 1st
 
 insert into Instructor
 values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, NJ', 'History');
+<<<<<<< HEAD
+=======
 
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 /* Creating Courses Table */
 CREATE TABLE Courses
 (
@@ -84,9 +101,14 @@ values (4, 'Art History 101', 'Introduction to art history', 'Beginner', 'Prisci
 insert into Courses
 values (5, 'Psychology 201', 'Intermediate level psychology course', 'Intermediate', 'Joanna Gaines');
 
+<<<<<<< HEAD
     
 -- CREATE Assessment Table 
 
+=======
+<<<<<<< HEAD
+    
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 CREATE TABLE Assessment (
  assessmentID integer,
  courseID integer,
@@ -113,6 +135,11 @@ values  (1004, 4, 'Mid-Term Basics',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:6
 insert into  Assessment
 values (1005, 5, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 
 /* Creating Payment Table */
 CREATE TABLE Invoice
@@ -145,11 +172,16 @@ values (4, 1, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 790, 6000);
 insert into Invoice
 values (5, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 
 
 CREATE Table Classes(
     stuID integer,
     instructorID integer,
+<<<<<<< HEAD
     constraint classes_pk primary key(stuID, instructorID)
 );
 
@@ -157,10 +189,17 @@ CREATE Table Classes(
 ALTER TABLE Classes ADD CONSTRAINT stu_classes_fk foreign key (stuID) references Student(stuID);
 ALTER TABLE Classes ADD CONSTRAINT inst_classes_fk foreign key (instructorID) references Instructor(instructorID);
 
+=======
+    constraint primary key(stuID, instructorID)
+    constraint stu_fk foreign key (stuID) references Student(stuID)
+    constraint inst_fk foreign key (instructorID) references Student(instructorID)
+)
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 
 CREATE Table StudentRecord(    
     stuID integer,
     assessmentID integer,
+<<<<<<< HEAD
     constraint sturecord_pk primary key(stuID, assessmentID)
 );
 
@@ -168,13 +207,29 @@ CREATE Table StudentRecord(
 ALTER TABLE StudentRecord ADD CONSTRAINT stu_studentrecord_fk foreign key (stuID) references Student(stuID);
 ALTER TABLE StudentRecord ADD CONSTRAINT assment_studentrecord_fk foreign key (assessmentID) references Assessment(assessmentID);
 
+=======
+    constraint primary key(stuID, assessmentID)
+    constraint stu_fk foreign key (stuID) references Student(stuID)
+    constraint assment_fk foreign key (assessmentID) references Assessment(assessmentID)
+)
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
 
 CREATE table Rating(
     stuID integer,
     courseID integer,
+<<<<<<< HEAD
     constraint rating_pk primary key(stuID, courseID)
 );
 
 
 ALTER TABLE Rating ADD CONSTRAINT stu_rating_fk foreign key (stuID) references Student(stuID);
 ALTER TABLE Rating ADD CONSTRAINT course_rating_fk foreign key (courseID) references Courses(courseID);
+=======
+    constraint primary key(stuID, courseID)
+    constraint stu_fk foreign key (stuID) references Student(stuID)
+    constraint course_fk foreign key (courseID) references Courses(courseID)
+
+)
+=======
+>>>>>>> ea81bc198d2185cf9063719845a23cf5762d4073
+>>>>>>> 2164bb59acccecb2b49817da78e6d803ea29e56e
