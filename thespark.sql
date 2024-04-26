@@ -1,28 +1,49 @@
 /* CREATE Student Table */
 
-CREATE TABLE Student 
+CREATE TABLE Student AS
+(
+    SELECT *
+    FROM Student1
+
+    UNION ALL
+
+    SELECT *
+    FROM Student2
+
+    SELECT *
+    FROM Student3
+
+    SELECT *
+    FROM Student4
+
+    SELECT *
+    FROM Student5
+);
+
+
+CREATE TABLE Student1 
 (
     stuID integer,
     stuName varchar(40),
     stuPassword varchar(250),
     stuAddress varchar(100),
     cellNumber integer,
-    constraint student_id_pk primary key (stuID)
+    constraint student1_id_pk primary key (stuID)
 );
 
-insert into Student 
+insert into Student1 
 values (1, 'Alex Zender', '#12ad3qwqreg', '120 Bloomfield Ave, Caldwell, NJ', 9876543210); 
 
-insert into Student 
+insert into Student1 
 values (2, 'Brat Chan', '234#adahjasd', '120 Passaic Ave, Paterson, NJ', 9876543210); 
 
-insert into Student 
+insert into Student1 
 values (3, 'Alice Johnson', '#1a2b3c4d', '123 Elm St, Springfield, IL', 1234567890);
 
-insert into Student 
+insert into Student1 
 values (4, 'John Smith', 'qwerty123', '456 Oak St, Boston, MA', 2345678901);
 
-insert into Student 
+insert into Student1 
 values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456789012);
 
 
@@ -61,7 +82,7 @@ CREATE TABLE Courses
 (
     courseID integer,
     courseName varchar(100),
-    description varchar(255),
+    descriptions varchar(255),
     difficulty varchar(50),
     professorName varchar(100),
     constraint course_id_pk primary key (courseID)
@@ -122,7 +143,7 @@ CREATE TABLE Invoice
    creditBalance integer,
    totalBalance integer,
    constraint invoice_invoiceID_pk primary key(invoiceID),
-   constraint stuID_fk foreign key (stuID) references Student(stuID)
+   constraint stuID_fk foreign key (stuID) references Student1(stuID)
 );
 
 insert into Invoice
@@ -131,10 +152,8 @@ values (1, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 300, 3000);
 insert into Invoice
 values (2, 3, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Credit', 600, 3500);
 
-
 insert into Invoice
 values (3, 4, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cash', 650, 500);
-
 
 insert into Invoice
 values (4, 1, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 790, 6000);
@@ -151,7 +170,7 @@ CREATE Table Classes(
 );
 
 
-ALTER TABLE Classes ADD CONSTRAINT stu_classes_fk foreign key (stuID) references Student(stuID);
+ALTER TABLE Classes ADD CONSTRAINT stu_classes_fk foreign key (stuID) references Student1(stuID);
 ALTER TABLE Classes ADD CONSTRAINT inst_classes_fk foreign key (instructorID) references Instructor(instructorID);
 
 
@@ -162,7 +181,7 @@ CREATE Table StudentRecord(
 );
 
 
-ALTER TABLE StudentRecord ADD CONSTRAINT stu_studentrecord_fk foreign key (stuID) references Student(stuID);
+ALTER TABLE StudentRecord ADD CONSTRAINT stu_studentrecord_fk foreign key (stuID) references Student1(stuID);
 ALTER TABLE StudentRecord ADD CONSTRAINT assment_studentrecord_fk foreign key (assessmentID) references Assessment(assessmentID);
 
 
@@ -173,6 +192,31 @@ CREATE table Rating(
 );
 
 
-ALTER TABLE Rating ADD CONSTRAINT stu_rating_fk foreign key (stuID) references Student(stuID);
+ALTER TABLE Rating ADD CONSTRAINT stu_rating_fk foreign key (stuID) references Student1(stuID);
 ALTER TABLE Rating ADD CONSTRAINT course_rating_fk foreign key (courseID) references Courses(courseID);
 
+
+
+
+
+-----------------------------------------------------------------------------------------------
+
+-- All Students - Anuj 
+
+
+
+
+-- All Instructor -  Pavel
+
+
+
+
+-- Courses - Resha
+
+
+
+-- Assessment - Suman
+
+
+
+-- Invoice - Unish
