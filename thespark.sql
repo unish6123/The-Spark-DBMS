@@ -10,14 +10,46 @@ CREATE TABLE Student AS
     SELECT *
     FROM Student2
 
+    UNION ALL
+
     SELECT *
     FROM Student3
+
+    UNION ALL
 
     SELECT *
     FROM Student4
 
+    UNION ALL
+
     SELECT *
     FROM Student5
+);
+
+CREATE TABLE Invoice AS
+(
+    SELECT *
+    FROM Invoice1
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice2
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice3
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice4
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice5
 );
 
 
