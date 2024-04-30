@@ -592,7 +592,7 @@ CREATE TABLE Invoice4
    creditBalance integer,
    totalBalance integer,
    constraint invoice_invoiceID4_pk primary key(invoiceID4),
-   constraint stuID4_fk foreign key (stuID) references Student4(stuID4)
+   constraint stuID4_fk foreign key (stuID4) references Student4(stuID4)
 );
 
 insert into Invoice4
@@ -620,67 +620,56 @@ values (20, 20, TO_DATE('2020/01/20', 'yyyy/mm/dd'), 'Cheque', 555, 7000);
 CREATE Table Classes1(
     stuID1 integer,
     instructorID1 integer,
-    constraint classes_pk primary key(stuID1, instructorID1)
+    constraint classes1_pk primary key(stuID1, instructorID1)
 );
 
 
 ALTER TABLE Classes1 ADD CONSTRAINT stu1_classes_fk foreign key (stuID1) references Student1(stuID1);
-ALTER TABLE Classes1 ADD CONSTRAINT inst1_classes_fk foreign key (instructorID) references Instructor1(instructorID1);
+ALTER TABLE Classes1 ADD CONSTRAINT inst1_classes_fk foreign key (instructorID1) references Instructor1(instructorID1);
 
 
 CREATE Table Classes2(
     stuID2 integer,
     instructorID2 integer,
-    constraint classes_pk primary key(stuID2, instructorID2)
+    constraint classes2_pk primary key(stuID2, instructorID2)
 );
 
 
 ALTER TABLE Classes2 ADD CONSTRAINT stu2_classes_fk foreign key (stuID2) references Student2(stuID2);
-ALTER TABLE Classes2 ADD CONSTRAINT inst2_classes_fk foreign key (instructorID) references Instructor2(instructorID2);
-
-
-CREATE Table Classes2(
-    stuID2 integer,
-    instructorID2 integer,
-    constraint classes_pk primary key(stuID2, instructorID2)
-);
-
-
-ALTER TABLE Classes2 ADD CONSTRAINT stu2_classes_fk foreign key (stuID2) references Student2(stuID2);
-ALTER TABLE Classes2 ADD CONSTRAINT inst2_classes_fk foreign key (instructorID) references Instructor2(instructorID2);
+ALTER TABLE Classes2 ADD CONSTRAINT inst2_classes_fk foreign key (instructorID2) references Instructor2(instructorID2);
 
 
 CREATE Table Classes3(
     stuID3 integer,
     instructorID3 integer,
-    constraint classes_pk primary key(stuID3, instructorID3)
+    constraint classes3_pk primary key(stuID3, instructorID3)
 );
 
 
 ALTER TABLE Classes3 ADD CONSTRAINT stu3_classes_fk foreign key (stuID3) references Student3(stuID3);
-ALTER TABLE Classes3 ADD CONSTRAINT inst3_classes_fk foreign key (instructorID) references Instructor3(instructorID3);
+ALTER TABLE Classes3 ADD CONSTRAINT inst3_classes_fk foreign key (instructorID3) references Instructor3(instructorID3);
 
 
 CREATE Table Classes4(
     stuID4 integer,
     instructorID4 integer,
-    constraint classes_pk primary key(stuID4, instructorID4)
+    constraint classes4_pk primary key(stuID4, instructorID4)
 );
 
 
 ALTER TABLE Classes4 ADD CONSTRAINT stu4_classes_fk foreign key (stuID4) references Student4(stuID4);
-ALTER TABLE Classes4 ADD CONSTRAINT inst4_classes_fk foreign key (instructorID) references Instructor4(instructorID4);
+ALTER TABLE Classes4 ADD CONSTRAINT inst4_classes_fk foreign key (instructorID4) references Instructor4(instructorID4);
 
 
 CREATE Table Classes5(
     stuID5 integer,
     instructorID5 integer,
-    constraint classes_pk primary key(stuID5, instructorID5)
+    constraint classes5_pk primary key(stuID5, instructorID5)
 );
 
 
-ALTER TABLE Classes ADD CONSTRAINT stu5_classes_fk foreign key (stuID5) references Student5(stuID5);
-ALTER TABLE Classes ADD CONSTRAINT inst5_classes_fk foreign key (instructorID) references Instructor5(instructorID5);
+ALTER TABLE Classes5 ADD CONSTRAINT stu5_classes_fk foreign key (stuID5) references Student5(stuID5);
+ALTER TABLE Classes5 ADD CONSTRAINT inst5_classes_fk foreign key (instructorID5) references Instructor5(instructorID5);
 
 
 CREATE Table StudentRecord1(    
@@ -701,8 +690,8 @@ CREATE Table StudentRecord2(
 );
 
 
-ALTER TABLE StudentRecord2 ADD CONSTRAINT stu1_studentrecord_fk foreign key (stuID2) references Student1(stuID2);
-ALTER TABLE StudentRecord2 ADD CONSTRAINT assment1_studentrecord_fk foreign key (assessmentID2) references Assessment1(assessmentID2);
+ALTER TABLE StudentRecord2 ADD CONSTRAINT stu2_studentrecord_fk foreign key (stuID2) references Student2(stuID2);
+ALTER TABLE StudentRecord2 ADD CONSTRAINT assment2_studentrecord_fk foreign key (assessmentID2) references Assessment2(assessmentID2);
 
 
 CREATE Table StudentRecord3(    
@@ -734,14 +723,14 @@ CREATE Table StudentRecord5(
 );
 
 
-ALTER TABLE StudentRecord5 ADD CONSTRAINT stu5_studentrecord_fk foreign key (stuID5) references Student5(stuID);
+ALTER TABLE StudentRecord5 ADD CONSTRAINT stu5_studentrecord_fk foreign key (stuID5) references Student5(stuID5);
 ALTER TABLE StudentRecord5 ADD CONSTRAINT assment5_studentrecord_fk foreign key (assessmentID5) references Assessment5(assessmentID5);
 
 
 CREATE table Rating1(
     stuID1 integer,
     courseID integer,
-    constraint rating_pk primary key(stuID1, courseID)
+    constraint rating1_pk primary key(stuID1, courseID)
 );
 
 
@@ -751,7 +740,7 @@ ALTER TABLE Rating1 ADD CONSTRAINT course1_rating_fk foreign key (courseID) refe
 CREATE table Rating2(
     stuID2 integer,
     courseID integer,
-    constraint rating_pk primary key(stuID2, courseID)
+    constraint rating2_pk primary key(stuID2, courseID)
 );
 
 
@@ -761,27 +750,27 @@ ALTER TABLE Rating2 ADD CONSTRAINT course2_rating_fk foreign key (courseID) refe
 CREATE table Rating3(
     stuID3 integer,
     courseID integer,
-    constraint rating_pk primary key(stuID3, courseID)
+    constraint rating3_pk primary key(stuID3, courseID)
 );
 
 
 ALTER TABLE Rating3 ADD CONSTRAINT stu3_rating_fk foreign key (stuID3) references Student3(stuID3);
 ALTER TABLE Rating3 ADD CONSTRAINT course3_rating_fk foreign key (courseID) references Courses(courseID);
 
-CREATE table Rating5(
-    stuID5 integer,
+CREATE table Rating4(
+    stuID4 integer,
     courseID integer,
-    constraint rating_pk primary key(stuID5, courseID)
+    constraint rating4_pk primary key(stuID4, courseID)
 );
 
 
-ALTER TABLE Rating5 ADD CONSTRAINT stu5_rating_fk foreign key (stuID5) references Student5(stuID5);
-ALTER TABLE Rating5 ADD CONSTRAINT course5_rating_fk foreign key (courseID) references Courses(courseID);
+ALTER TABLE Rating4 ADD CONSTRAINT stu4_rating_fk foreign key (stuID4) references Student4(stuID4);
+ALTER TABLE Rating4 ADD CONSTRAINT course4_rating_fk foreign key (courseID) references Courses(courseID);
 
-CREATE table Rating4(
+CREATE table Rating5(
     stuID5 integer,
     courseID integer,
-    constraint rating_pk primary key(stuID5, courseID)
+    constraint rating5_pk primary key(stuID5, courseID)
 );
 
 
