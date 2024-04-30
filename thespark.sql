@@ -867,3 +867,112 @@ CREATE TABLE Invoice AS
     FROM Invoice5
 );
 
+
+CREATE TABLE Assessment AS
+(
+    SELECT *
+    FROM Assessment1
+
+    UNION ALL
+
+    SELECT *
+    FROM Assessment2
+
+    UNION ALL
+
+    SELECT *
+    FROM Assessment3
+
+    UNION ALL
+
+    SELECT *
+    FROM Assessment4
+
+    UNION ALL
+
+    SELECT *
+    FROM Assessment5
+);
+
+
+CREATE TABLE Classes AS
+(
+    SELECT *
+    FROM Classes1
+
+    UNION ALL
+
+    SELECT *
+    FROM Classes2
+
+    UNION ALL
+
+    SELECT *
+    FROM Classes3
+
+    UNION ALL
+
+    SELECT *
+    FROM Classes4
+
+    UNION ALL
+
+    SELECT *
+    FROM Classes5
+);
+
+
+
+CREATE TABLE StudentRecord AS
+(
+    SELECT *
+    FROM StudentRecord1
+
+    UNION ALL
+
+    SELECT *
+    FROM StudentRecord2
+
+    UNION ALL
+
+    SELECT *
+    FROM StudentRecord3
+
+    UNION ALL
+
+    SELECT *
+    FROM StudentRecord4
+
+    UNION ALL
+
+    SELECT *
+    FROM StudentRecord5
+);
+
+
+CREATE TABLE Rating AS
+(
+    SELECT *
+    FROM Rating1
+
+    UNION ALL
+
+    SELECT *
+    FROM Rating2
+
+    UNION ALL
+
+    SELECT *
+    FROM Rating3
+
+    UNION ALL
+
+    SELECT *
+    FROM Rating4
+
+    UNION ALL
+
+    SELECT *
+    FROM Rating5
+);
+
