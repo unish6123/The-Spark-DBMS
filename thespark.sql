@@ -580,7 +580,7 @@ values (14, 14, TO_DATE('2019/04/20', 'yyyy/mm/dd'), 'Credit', 70, 6633);
 
 
 insert into Invoice3
-values (15, 15, TO_DATE('2020/14/27', 'yyyy/mm/dd'), 'Cheque', 5, 7090);
+values (15, 15, TO_DATE('2020/01/27', 'yyyy/mm/dd'), 'Cheque', 5, 7090);
 
 -- Invoice5 table
 CREATE TABLE Invoice4
