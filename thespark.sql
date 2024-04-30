@@ -129,9 +129,6 @@ insert into Student5
 values (25, 'Oliver Brown', 'newpass123', '2345 Park Ave, Los Angeles, CA', 3334445555);
 
 
-
-/* Creating Instructor Table */
-
 /* Creating Instructor Table1 */
 CREATE TABLE Instructor1
 (
@@ -147,21 +144,18 @@ CREATE TABLE Instructor1
 insert into Instructor1
 values (1, 'John Mill', 'Masters in Mathematics', '121 Bloomfield Ave, Newark, NJ', 'Mathematics');
 
-
 insert into Instructor1
 values (2, 'Joanna Gaines', 'Masters in Biology', '12 St. James Place, Montclair, NJ', 'Biology');
-
 
 insert into Instructor1
 values (3, 'William Sanchez', 'Masters in Physics', '99 Martin Ave, Caldwell, NJ', 'Physics');
 
-
 insert into Instructor1
 values (4, 'Brianna Levine', 'Bachelor in Computer Information Systems', '89 1st Street, Roseville, NJ', 'Computer Science');
 
-
 insert into Instructor1
 values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, NJ', 'History');
+
 
 
 /* Creating Instructor Table2 */
@@ -344,6 +338,8 @@ values  (4, 4, 'Mid-Term Basics',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:0
 insert into  Assessment1
 values (5, 5, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
 
+
+
 /* CREATE Assessment2 Table  */
 
 CREATE TABLE Assessment2 (
@@ -488,6 +484,7 @@ insert into Invoice5
 values (25, 25, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
 
 
+
 -- creating invoice1 table
 CREATE TABLE Invoice1
 (
@@ -507,17 +504,16 @@ values (1, 1, TO_DATE('2024/05/20', 'yyyy/mm/dd'), 'Debit', 30, 3000);
 insert into Invoice1
 values (2, 2, TO_DATE('2024/07/20', 'yyyy/mm/dd'), 'Credit', 60, 3800);
 
-
 insert into Invoice1
 values (3, 3, TO_DATE('2024/09/20', 'yyyy/mm/dd'), 'Cash', 65, 500);
-
 
 insert into Invoice1
 values (4, 4, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 79, 6000);
 
-
 insert into Invoice1
 values (5, 5, TO_DATE('2024/12/20', 'yyyy/mm/dd'), 'Cheque', 300, 5700);
+
+
 
 -- Creating table of 3rd invoice
 CREATE TABLE Invoice2
