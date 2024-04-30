@@ -548,7 +548,7 @@ values (9, 9, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 790, 6009);
 
 
 insert into Invoice2
-values (10, 10, TO_DATE('2024/14/27', 'yyyy/mm/dd'), 'Cheque', 30, 5700);
+values (10, 10, TO_DATE('2024/12/27', 'yyyy/mm/dd'), 'Cheque', 30, 5700);
 
 
 -- Creating table of 4th invoice
