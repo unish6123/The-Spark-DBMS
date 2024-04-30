@@ -1,92 +1,12 @@
 /* CREATE Student Table */
-
-CREATE TABLE Student AS
-    SELECT *
-    FROM Student1
-
-    UNION ALL
-
-    SELECT *
-    FROM Student2
-
-    UNION ALL
-
-    SELECT *
-    FROM Student3
-
-    UNION ALL
-
-    SELECT *
-    FROM Student4
-
-    UNION ALL
-
-    SELECT *
-    FROM Student5
-;
-
-CREATE TABLE Instructor AS
-(
-    SELECT *
-    FROM Instructor1
-
-    UNION ALL
-
-    SELECT *
-    FROM Instructor2
-
-    UNION ALL
-
-    SELECT *
-    FROM Instructor3
-
-    UNION ALL
-
-    SELECT *
-    FROM Instructor4
-
-    UNION ALL
-
-    SELECT *
-    FROM Instructor5
-);
-
-CREATE TABLE Invoice AS
-(
-    SELECT *
-    FROM Invoice1
-
-    UNION ALL
-
-    SELECT *
-    FROM Invoice2
-
-    UNION ALL
-
-    SELECT *
-    FROM Invoice3
-
-    UNION ALL
-
-    SELECT *
-    FROM Invoice4
-
-    UNION ALL
-
-    SELECT *
-    FROM Invoice5
-);
-
-
-
 CREATE TABLE Student1 
 (
-    stuID integer,
+    stuID1 integer,
     stuName varchar(40),
     stuPassword varchar(250),
     stuAddress varchar(100),
     cellNumber integer,
-    constraint student1_id_pk primary key (stuID)
+    constraint student1_id_pk primary key (stuID1)
 );
 
 insert into Student1 
@@ -108,12 +28,12 @@ values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456
 /* CREATE Student2 Table */
 CREATE TABLE Student2 
 (
-    stuID integer,
+    stuID2 integer,
     stuName varchar(40),
     stuPassword varchar(250),
     stuAddress varchar(100),
     cellNumber integer,
-    constraint student_id_pk primary key (stuID)
+    constraint student2_id_pk primary key (stuID2)
 );
 
 insert into Student2 
@@ -134,12 +54,12 @@ values (10, 'Olivia Brown', '#1a2password123', '189 Maple St, San Francisco, CA'
 /* CREATE Student3 Table */
 CREATE TABLE Student3 
 (
-    stuID integer,
+    stuID3 integer,
     stuName varchar(40),
     stuPassword varchar(250),
     stuAddress varchar(100),
     cellNumber integer,
-    constraint student_id_pk primary key (stuID)
+    constraint student3_id_pk primary key (stuID3)
 );
 
 insert into Student3 
@@ -160,12 +80,12 @@ values (15, 'Logan Davis', 'newpass123', '9012 Maple St, Phoenix, AZ', 666777888
 /* CREATE Student4 Table */
 CREATE TABLE Student4 
 (
-    stuID integer,
+    stuID4 integer,
     stuName varchar(40),
     stuPassword varchar(250),
     stuAddress varchar(100),
     cellNumber integer,
-    constraint student_id_pk primary key (stuID)
+    constraint student4_id_pk primary key (stuID4)
 );
 
 insert into Student4 
@@ -186,12 +106,12 @@ values (20, 'Gabriel Lewis', 'newpass234', '1234 Broadway, Portland, OR', 444555
 /* CREATE Student5 Table */
 CREATE TABLE Student5 
 (
-    stuID integer,
+    stuID5 integer,
     stuName varchar(40),
     stuPassword varchar(250),
     stuAddress varchar(100),
     cellNumber integer,
-    constraint student_id_pk primary key (stuID)
+    constraint student5_id_pk primary key (stuID5)
 );
 insert into Student5 
 values (21, 'Elijah Davis', 'password123', '123 Main St, Chicago, IL', 5556667777);
@@ -401,20 +321,20 @@ values (5, 'Psychology 201', 'Intermediate level psychology course', 'Intermedia
 
 /* CREATE Assessment1 Table  */
 CREATE TABLE Assessment1 (
- assessmentID integer,
- courseID integer,
+ assessmentID1 integer,
+ courseID1 integer,
  title varchar(255),
  passingScore integer,
  dueDate Date,
  assessmentTime varchar(255),
- constraint assessment_assessmentID_pk primary key(assessmentID),
- constraint courseID_fk foreign key (courseID) references Courses(courseID)
+ constraint assessment_assessmentID1_pk primary key(assessmentID1),
+ constraint courseID1_fk foreign key (courseID1) references Courses(courseID)
 );
 
 insert into  Assessment1 
 values (1, 1, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
 
-insert into  Assessment
+insert into  Assessment1
 values  (2, 2, 'Mid-Term',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
 
 insert into  Assessment1 
@@ -429,14 +349,14 @@ values (5, 5, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
 /* CREATE Assessment2 Table  */
 
 CREATE TABLE Assessment2 (
- assessmentID integer,
- courseID integer,
+ assessmentID2 integer,
+ courseID2 integer,
  title varchar(255),
  passingScore integer,
  dueDate Date,
  assessmentTime varchar(255),
- constraint assessment_assessmentID_pk primary key(assessmentID),
- constraint courseID_fk foreign key (courseID) references Courses(courseID)
+ constraint assessment_assessmentID2_pk primary key(assessmentID2),
+ constraint courseID2_fk foreign key (courseID2) references Courses(courseID)
 );
 
 insert into Assessment2 
@@ -458,14 +378,14 @@ values (10, 5, 'Group Presentation', 70, TO_DATE('2024/06/08', 'yyyy/mm/dd'), '0
 /* CREATE Assessment3 Table  */
 
 CREATE TABLE Assessment3 (
- assessmentID integer,
- courseID integer,
+ assessmentID3 integer,
+ courseID3 integer,
  title varchar(255),
  passingScore integer,
  dueDate Date,
  assessmentTime varchar(255),
- constraint assessment_assessmentID_pk primary key(assessmentID),
- constraint courseID_fk foreign key (courseID) references Courses(courseID)
+ constraint assessment_assessmentID3_pk primary key(assessmentID3),
+ constraint courseID3_fk foreign key (courseID3) references Courses(courseID)
 );
 
 insert into Assessment3 
@@ -486,14 +406,14 @@ values (15, 5, 'Final Project', 60, TO_DATE('2024/07/29', 'yyyy/mm/dd'), '02:00:
 /* CREATE Assessment4 Table  */
 
 CREATE TABLE Assessment4 (
- assessmentID integer,
- courseID integer,
+ assessmentID4 integer,
+ courseID4 integer,
  title varchar(255),
  passingScore integer,
  dueDate Date,
  assessmentTime varchar(255),
- constraint assessment_assessmentID_pk primary key(assessmentID),
- constraint courseID_fk foreign key (courseID) references Courses(courseID)
+ constraint assessment_assessmentID4_pk primary key(assessmentID4),
+ constraint courseID4_fk foreign key (courseID4) references Courses(courseID)
 );
 
 insert into Assessment4 
@@ -514,14 +434,14 @@ values (20, 5, 'Final Exam 2', 70, TO_DATE('2024/09/02', 'yyyy/mm/dd'), '02:30:0
 /* CREATE Assessment3 Table  */
 
 CREATE TABLE Assessment5 (
- assessmentID integer,
- courseID integer,
+ assessmentID5 integer,
+ courseID5 integer,
  title varchar(255),
  passingScore integer,
  dueDate Date,
  assessmentTime varchar(255),
- constraint assessment_assessmentID_pk primary key(assessmentID),
- constraint courseID_fk foreign key (courseID) references Courses(courseID)
+ constraint assessment_assessmentID5_pk primary key(assessmentID5),
+ constraint courseID5_fk foreign key (courseID5) references Courses(courseID)
 );
 
 insert into Assessment5 
@@ -543,14 +463,14 @@ values (25, 5, 'Final Assessment', 60, TO_DATE('2024/10/01', 'yyyy/mm/dd'), '02:
 /* Creating Payment Table */
 CREATE TABLE Invoice5
 (
-   invoiceID integer,
-   stuID integer,
+   invoiceID5 integer,
+   stuID5 integer,
    inVoiceDate Date,
    paymentType varchar(100),
    creditBalance integer,
    totalBalance integer,
-   constraint invoice_invoiceID_pk primary key(invoiceID),
-   constraint stuID_fk foreign key (stuID) references Student1(stuID)
+   constraint invoice_invoiceID5_pk primary key(invoiceID5),
+   constraint stuID5_fk foreign key (stuID5) references Student5(stuID5)
 );
 
 insert into Invoice5
@@ -570,50 +490,17 @@ insert into Invoice
 values (5, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
 
 
-CREATE Table Classes(
-    stuID integer,
-    instructorID integer,
-    constraint classes_pk primary key(stuID, instructorID)
-);
-
-
-ALTER TABLE Classes ADD CONSTRAINT stu_classes_fk foreign key (stuID) references Student1(stuID);
-ALTER TABLE Classes ADD CONSTRAINT inst_classes_fk foreign key (instructorID) references Instructor1(instructorID);
-
-
-CREATE Table StudentRecord(    
-    stuID integer,
-    assessmentID integer,
-    constraint sturecord_pk primary key(stuID, assessmentID)
-);
-
-
-ALTER TABLE StudentRecord ADD CONSTRAINT stu_studentrecord_fk foreign key (stuID) references Student1(stuID);
-ALTER TABLE StudentRecord ADD CONSTRAINT assment_studentrecord_fk foreign key (assessmentID) references Assessment1(assessmentID);
-
-
-CREATE table Rating(
-    stuID integer,
-    courseID integer,
-    constraint rating_pk primary key(stuID, courseID)
-);
-
-
-ALTER TABLE Rating ADD CONSTRAINT stu_rating_fk foreign key (stuID) references Student1(stuID);
-ALTER TABLE Rating ADD CONSTRAINT course_rating_fk foreign key (courseID) references Courses1(courseID);
-
-
 -- creating invoice1 table
 CREATE TABLE Invoice1
 (
-   invoiceID integer,
-   stuID integer,
+   invoiceID1 integer,
+   stuID1 integer,
    inVoiceDate Date,
    paymentType varchar(100),
    creditBalance integer,
    totalBalance integer,
-   constraint invoice_invoiceID_pk primary key(invoiceID),
-   constraint stuID_fk foreign key (stuID) references Student(stuID)
+   constraint invoice_invoiceID1_pk primary key(invoiceID1),
+   constraint stuID1_fk foreign key (stuID1) references Student1(stuID1)
 );
 
 insert into Invoice1
@@ -637,14 +524,14 @@ values (10, 10, TO_DATE('2024/12/20', 'yyyy/mm/dd'), 'Cheque', 300, 5700);
 -- Creating table of 3rd invoice
 CREATE TABLE Invoice2
 (
-   invoiceID integer,
-   stuID integer,
+   invoiceID2 integer,
+   stuID2 integer,
    inVoiceDate Date,
    paymentType varchar(100),
    creditBalance integer,
    totalBalance integer,
-   constraint invoice_invoiceID_pk primary key(invoiceID),
-   constraint stuID_fk foreign key (stuID) references Student(stuID)
+   constraint invoice_invoiceID2_pk primary key(invoiceID2),
+   constraint stuID2_fk foreign key (stuID2) references Student2(stuID2)
 );
 
 insert into Invoice2
@@ -669,14 +556,14 @@ values (15, 15, TO_DATE('2024/14/27', 'yyyy/mm/dd'), 'Cheque', 30, 5700);
 -- Creating table of 4th invoice
 CREATE TABLE Invoice3
 (
-   invoiceID integer,
-   stuID integer,
+   invoiceID3 integer,
+   stuID3 integer,
    inVoiceDate Date,
    paymentType varchar(100),
    creditBalance integer,
    totalBalance integer,
-   constraint invoice_invoiceID_pk primary key(invoiceID),
-   constraint stuID_fk foreign key (stuID) references Student(stuID)
+   constraint invoice_invoiceID3_pk primary key(invoiceID3),
+   constraint stuID3_fk foreign key (stuID3) references Student3(stuID3)
 );
 
 insert into Invoice3
@@ -700,14 +587,14 @@ values (20, 20, TO_DATE('2020/14/27', 'yyyy/mm/dd'), 'Cheque', 5, 7090);
 -- Invoice5 table
 CREATE TABLE Invoice4
 (
-   invoiceID integer,
-   stuID integer,
+   invoiceID4 integer,
+   stuID4 integer,
    inVoiceDate Date,
    paymentType varchar(100),
    creditBalance integer,
    totalBalance integer,
-   constraint invoice_invoiceID_pk primary key(invoiceID),
-   constraint stuID_fk foreign key (stuID) references Student(stuID)
+   constraint invoice_invoiceID4_pk primary key(invoiceID4),
+   constraint stuID4_fk foreign key (stuID) references Student4(stuID4)
 );
 
 insert into Invoice4
@@ -727,3 +614,258 @@ values (24, 24, TO_DATE('2019/01/07', 'yyyy/mm/dd'), 'Credit', 777, 6600);
 
 insert into Invoice4
 values (25, 25, TO_DATE('2020/01/20', 'yyyy/mm/dd'), 'Cheque', 555, 7000);
+
+
+
+
+
+CREATE Table Classes1(
+    stuID1 integer,
+    instructorID1 integer,
+    constraint classes_pk primary key(stuID1, instructorID1)
+);
+
+
+ALTER TABLE Classes1 ADD CONSTRAINT stu1_classes_fk foreign key (stuID1) references Student1(stuID1);
+ALTER TABLE Classes1 ADD CONSTRAINT inst1_classes_fk foreign key (instructorID) references Instructor1(instructorID1);
+
+
+CREATE Table Classes2(
+    stuID2 integer,
+    instructorID2 integer,
+    constraint classes_pk primary key(stuID2, instructorID2)
+);
+
+
+ALTER TABLE Classes2 ADD CONSTRAINT stu2_classes_fk foreign key (stuID2) references Student2(stuID2);
+ALTER TABLE Classes2 ADD CONSTRAINT inst2_classes_fk foreign key (instructorID) references Instructor2(instructorID2);
+
+
+CREATE Table Classes2(
+    stuID2 integer,
+    instructorID2 integer,
+    constraint classes_pk primary key(stuID2, instructorID2)
+);
+
+
+ALTER TABLE Classes2 ADD CONSTRAINT stu2_classes_fk foreign key (stuID2) references Student2(stuID2);
+ALTER TABLE Classes2 ADD CONSTRAINT inst2_classes_fk foreign key (instructorID) references Instructor2(instructorID2);
+
+
+CREATE Table Classes3(
+    stuID3 integer,
+    instructorID3 integer,
+    constraint classes_pk primary key(stuID3, instructorID3)
+);
+
+
+ALTER TABLE Classes3 ADD CONSTRAINT stu3_classes_fk foreign key (stuID3) references Student3(stuID3);
+ALTER TABLE Classes3 ADD CONSTRAINT inst3_classes_fk foreign key (instructorID) references Instructor3(instructorID3);
+
+
+CREATE Table Classes4(
+    stuID4 integer,
+    instructorID4 integer,
+    constraint classes_pk primary key(stuID4, instructorID4)
+);
+
+
+ALTER TABLE Classes4 ADD CONSTRAINT stu4_classes_fk foreign key (stuID4) references Student4(stuID4);
+ALTER TABLE Classes4 ADD CONSTRAINT inst4_classes_fk foreign key (instructorID) references Instructor4(instructorID4);
+
+
+CREATE Table Classes5(
+    stuID5 integer,
+    instructorID5 integer,
+    constraint classes_pk primary key(stuID5, instructorID5)
+);
+
+
+ALTER TABLE Classes ADD CONSTRAINT stu5_classes_fk foreign key (stuID5) references Student5(stuID5);
+ALTER TABLE Classes ADD CONSTRAINT inst5_classes_fk foreign key (instructorID) references Instructor5(instructorID5);
+
+
+CREATE Table StudentRecord1(    
+    stuID1 integer,
+    assessmentID1 integer,
+    constraint sturecord1_pk primary key(stuID1, assessmentID1)
+);
+
+
+ALTER TABLE StudentRecord1 ADD CONSTRAINT stu1_studentrecord_fk foreign key (stuID1) references Student1(stuID);
+ALTER TABLE StudentRecord1 ADD CONSTRAINT assment1_studentrecord_fk foreign key (assessmentID1) references Assessment1(assessmentID1);
+
+
+CREATE Table StudentRecord2(    
+    stuID1 integer,
+    assessmentID1 integer,
+    constraint sturecord1_pk primary key(stuID1, assessmentID1)
+);
+
+
+ALTER TABLE StudentRecord2 ADD CONSTRAINT stu1_studentrecord_fk foreign key (stuID1) references Student1(stuID);
+ALTER TABLE StudentRecord2 ADD CONSTRAINT assment1_studentrecord_fk foreign key (assessmentID1) references Assessment1(assessmentID1);
+
+
+CREATE Table StudentRecord3(    
+    stuID1 integer,
+    assessmentID1 integer,
+    constraint sturecord1_pk primary key(stuID1, assessmentID1)
+);
+
+
+ALTER TABLE StudentRecord3 ADD CONSTRAINT stu1_studentrecord_fk foreign key (stuID1) references Student1(stuID);
+ALTER TABLE StudentRecord3 ADD CONSTRAINT assment1_studentrecord_fk foreign key (assessmentID1) references Assessment1(assessmentID1);
+
+
+CREATE Table StudentRecord4(    
+    stuID1 integer,
+    assessmentID1 integer,
+    constraint sturecord1_pk primary key(stuID1, assessmentID1)
+);
+
+
+ALTER TABLE StudentRecord4 ADD CONSTRAINT stu1_studentrecord_fk foreign key (stuID1) references Student1(stuID);
+ALTER TABLE StudentRecord4 ADD CONSTRAINT assment1_studentrecord_fk foreign key (assessmentID1) references Assessment1(assessmentID1);
+
+
+CREATE Table StudentRecord5(    
+    stuID1 integer,
+    assessmentID1 integer,
+    constraint sturecord1_pk primary key(stuID1, assessmentID1)
+);
+
+
+ALTER TABLE StudentRecord5 ADD CONSTRAINT stu1_studentrecord_fk foreign key (stuID1) references Student1(stuID);
+ALTER TABLE StudentRecord5 ADD CONSTRAINT assment1_studentrecord_fk foreign key (assessmentID1) references Assessment1(assessmentID1);
+
+
+CREATE table Rating1(
+    stuID1 integer,
+    courseID integer,
+    constraint rating_pk primary key(stuID1, courseID)
+);
+
+
+ALTER TABLE Rating1 ADD CONSTRAINT stu1_rating_fk foreign key (stuID1) references Student1(stuID1);
+ALTER TABLE Rating1 ADD CONSTRAINT course1_rating_fk foreign key (courseID) references Courses(courseID);
+
+CREATE table Rating2(
+    stuID1 integer,
+    courseID integer,
+    constraint rating_pk primary key(stuID1, courseID)
+);
+
+
+ALTER TABLE Rating2 ADD CONSTRAINT stu1_rating_fk foreign key (stuID1) references Student1(stuID1);
+ALTER TABLE Rating2 ADD CONSTRAINT course1_rating_fk foreign key (courseID) references Courses(courseID);
+
+CREATE table Rating3(
+    stuID1 integer,
+    courseID integer,
+    constraint rating_pk primary key(stuID1, courseID)
+);
+
+
+ALTER TABLE Rating3 ADD CONSTRAINT stu1_rating_fk foreign key (stuID1) references Student1(stuID1);
+ALTER TABLE Rating3 ADD CONSTRAINT course1_rating_fk foreign key (courseID) references Courses(courseID);
+
+CREATE table Rating5(
+    stuID1 integer,
+    courseID integer,
+    constraint rating_pk primary key(stuID1, courseID)
+);
+
+
+ALTER TABLE Rating5 ADD CONSTRAINT stu1_rating_fk foreign key (stuID1) references Student1(stuID1);
+ALTER TABLE Rating5 ADD CONSTRAINT course1_rating_fk foreign key (courseID) references Courses(courseID);
+
+CREATE table Rating4(
+    stuID1 integer,
+    courseID integer,
+    constraint rating_pk primary key(stuID1, courseID)
+);
+
+
+ALTER TABLE Rating5 ADD CONSTRAINT stu1_rating_fk foreign key (stuID1) references Student1(stuID1);
+ALTER TABLE Rating5 ADD CONSTRAINT course1_rating_fk foreign key (courseID) references Courses(courseID);
+
+
+
+CREATE TABLE Student AS
+    SELECT *
+    FROM Student1
+
+    UNION ALL
+
+    SELECT *
+    FROM Student2
+
+    UNION ALL
+
+    SELECT *
+    FROM Student3
+
+    UNION ALL
+
+    SELECT *
+    FROM Student4
+
+    UNION ALL
+
+    SELECT *
+    FROM Student5
+;
+
+CREATE TABLE Instructor AS
+(
+    SELECT *
+    FROM Instructor1
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor2
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor3
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor4
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor5
+);
+
+CREATE TABLE Invoice AS
+(
+    SELECT *
+    FROM Invoice1
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice2
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice3
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice4
+
+    UNION ALL
+
+    SELECT *
+    FROM Invoice5
+);
+
