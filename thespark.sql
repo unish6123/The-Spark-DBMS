@@ -472,20 +472,20 @@ CREATE TABLE Invoice5
 );
 
 insert into Invoice5
-values (1, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 300, 3000);
+values (21, 21, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 300, 3000);
 
 insert into Invoice5
-values (2, 3, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Credit', 600, 3500);
+values (22, 22, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Credit', 600, 3500);
 
 insert into Invoice5
-values (3, 4, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cash', 650, 500);
+values (23, 23, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cash', 650, 500);
 
 insert into Invoice5
-values (4, 1, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 790, 6000);
+values (24, 24, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 790, 6000);
 
 
-insert into Invoice
-values (5, 2, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
+insert into Invoice5
+values (25, 25, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Cheque', 3000, 5700);
 
 
 -- creating invoice1 table
@@ -502,22 +502,22 @@ CREATE TABLE Invoice1
 );
 
 insert into Invoice1
-values (6, 6, TO_DATE('2024/05/20', 'yyyy/mm/dd'), 'Debit', 30, 3000);
+values (1, 1, TO_DATE('2024/05/20', 'yyyy/mm/dd'), 'Debit', 30, 3000);
 
 insert into Invoice1
-values (7, 7, TO_DATE('2024/07/20', 'yyyy/mm/dd'), 'Credit', 60, 3800);
-
-
-insert into Invoice1
-values (8, 8, TO_DATE('2024/09/20', 'yyyy/mm/dd'), 'Cash', 65, 500);
+values (2, 2, TO_DATE('2024/07/20', 'yyyy/mm/dd'), 'Credit', 60, 3800);
 
 
 insert into Invoice1
-values (9, 9, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 79, 6000);
+values (3, 3, TO_DATE('2024/09/20', 'yyyy/mm/dd'), 'Cash', 65, 500);
 
 
 insert into Invoice1
-values (10, 10, TO_DATE('2024/12/20', 'yyyy/mm/dd'), 'Cheque', 300, 5700);
+values (4, 4, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 79, 6000);
+
+
+insert into Invoice1
+values (5, 5, TO_DATE('2024/12/20', 'yyyy/mm/dd'), 'Cheque', 300, 5700);
 
 -- Creating table of 3rd invoice
 CREATE TABLE Invoice2
@@ -533,22 +533,22 @@ CREATE TABLE Invoice2
 );
 
 insert into Invoice2
-values (11, 11, TO_DATE('2024/01/20', 'yyyy/mm/dd'), 'Debit', 304, 3089);
+values (6, 6, TO_DATE('2024/01/20', 'yyyy/mm/dd'), 'Debit', 304, 3089);
 
 insert into Invoice2
-values (12, 12, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 60, 4087);
-
-
-insert into Invoice2
-values (13, 13, TO_DATE('2024/03/02', 'yyyy/mm/dd'), 'Credit', 680, 5009);
+values (7, 7, TO_DATE('2024/02/20', 'yyyy/mm/dd'), 'Debit', 60, 4087);
 
 
 insert into Invoice2
-values (14, 14, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 790, 6009);
+values (8, 8, TO_DATE('2024/03/02', 'yyyy/mm/dd'), 'Credit', 680, 5009);
 
 
 insert into Invoice2
-values (15, 15, TO_DATE('2024/14/27', 'yyyy/mm/dd'), 'Cheque', 30, 5700);
+values (9, 9, TO_DATE('2024/04/20', 'yyyy/mm/dd'), 'Debit', 790, 6009);
+
+
+insert into Invoice2
+values (10, 10, TO_DATE('2024/14/27', 'yyyy/mm/dd'), 'Cheque', 30, 5700);
 
 
 -- Creating table of 4th invoice
@@ -565,22 +565,22 @@ CREATE TABLE Invoice3
 );
 
 insert into Invoice3
-values (16, 16, TO_DATE('2023/01/20', 'yyyy/mm/dd'), 'Debit', 334, 3006);
+values (11, 11, TO_DATE('2023/01/20', 'yyyy/mm/dd'), 'Debit', 334, 3006);
 
 insert into Invoice3
-values (17, 17, TO_DATE('2013/02/20', 'yyyy/mm/dd'), 'Credit', 400, 4000);
-
-
-insert into Invoice3
-values (18, 18, TO_DATE('2012/03/02', 'yyyy/mm/dd'), 'Credit', 380, 5030);
+values (12, 12, TO_DATE('2013/02/20', 'yyyy/mm/dd'), 'Credit', 400, 4000);
 
 
 insert into Invoice3
-values (19, 19, TO_DATE('2019/04/20', 'yyyy/mm/dd'), 'Credit', 70, 6633);
+values (13, 13, TO_DATE('2012/03/02', 'yyyy/mm/dd'), 'Credit', 380, 5030);
 
 
 insert into Invoice3
-values (20, 20, TO_DATE('2020/14/27', 'yyyy/mm/dd'), 'Cheque', 5, 7090);
+values (14, 14, TO_DATE('2019/04/20', 'yyyy/mm/dd'), 'Credit', 70, 6633);
+
+
+insert into Invoice3
+values (15, 15, TO_DATE('2020/14/27', 'yyyy/mm/dd'), 'Cheque', 5, 7090);
 
 -- Invoice5 table
 CREATE TABLE Invoice4
@@ -596,22 +596,22 @@ CREATE TABLE Invoice4
 );
 
 insert into Invoice4
-values (21, 21, TO_DATE('2023/01/20', 'yyyy/mm/dd'), 'Debit', 334, 2000);
+values (16, 16, TO_DATE('2023/01/20', 'yyyy/mm/dd'), 'Debit', 334, 2000);
 
 insert into Invoice4
-values (22, 22, TO_DATE('2013/02/20', 'yyyy/mm/dd'), 'Credit', 400, 4000);
-
-
-insert into Invoice4
-values (23, 23, TO_DATE('2012/03/18', 'yyyy/mm/dd'), 'Credit', 381, 5030);
+values (17, 17, TO_DATE('2013/02/20', 'yyyy/mm/dd'), 'Credit', 400, 4000);
 
 
 insert into Invoice4
-values (24, 24, TO_DATE('2019/01/07', 'yyyy/mm/dd'), 'Credit', 777, 6600);
+values (18, 18, TO_DATE('2012/03/18', 'yyyy/mm/dd'), 'Credit', 381, 5030);
 
 
 insert into Invoice4
-values (25, 25, TO_DATE('2020/01/20', 'yyyy/mm/dd'), 'Cheque', 555, 7000);
+values (19, 19, TO_DATE('2019/01/07', 'yyyy/mm/dd'), 'Credit', 777, 6600);
+
+
+insert into Invoice4
+values (20, 20, TO_DATE('2020/01/20', 'yyyy/mm/dd'), 'Cheque', 555, 7000);
 
 
 
