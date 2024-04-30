@@ -1,7 +1,6 @@
 /* CREATE Student Table */
 
 CREATE TABLE Student AS
-(
     SELECT *
     FROM Student1
 
@@ -24,6 +23,32 @@ CREATE TABLE Student AS
 
     SELECT *
     FROM Student5
+;
+
+CREATE TABLE Instructor AS
+(
+    SELECT *
+    FROM Instructor1
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor2
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor3
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor4
+
+    UNION ALL
+
+    SELECT *
+    FROM Instructor5
 );
 
 CREATE TABLE Invoice AS
@@ -53,6 +78,7 @@ CREATE TABLE Invoice AS
 );
 
 
+
 CREATE TABLE Student1 
 (
     stuID integer,
@@ -79,34 +105,268 @@ insert into Student1
 values (5, 'Emily Davis', 'password123', '789 Maple St, San Francisco, CA', 3456789012);
 
 
-/* Creating Instructor Table */
-CREATE TABLE Instructor
+/* CREATE Student2 Table */
+CREATE TABLE Student2 
 (
-   instructorID integer,
-   instructorName varchar(40),
-   instructorQual varchar(250),
-   instructorAddress varchar(100),
-   instructorDepartment varchar(100),
-   constraint instructor_instructorID_pk primary key(instructorID)
+    stuID integer,
+    stuName varchar(40),
+    stuPassword varchar(250),
+    stuAddress varchar(100),
+    cellNumber integer,
+    constraint student_id_pk primary key (stuID)
 );
 
-insert into Instructor
+insert into Student2 
+values (6, 'Alex Junior', 'qreg#12ad3qw', '1120 Passaic Ave, Caldwell, NJ', 9876547890); 
+
+insert into Student2 
+values (7, 'Liam Chen', '2hjasd34#ada', '78 Bloomfield Ave, Paterson, NJ', 9876543210); 
+
+insert into Student2 
+values (8, 'Peter Khadka', '4d#1a2b3c', '23 Elm St, Springfield, IL', 1234568901);
+
+insert into Student2 
+values (9, 'Mason Chan', 'passwordqwerty123', '156 Oak St, Boston, MA', 2345672210);
+
+insert into Student2 
+values (10, 'Olivia Brown', '#1a2password123', '189 Maple St, San Francisco, CA', 3456789012);
+
+/* CREATE Student3 Table */
+CREATE TABLE Student3 
+(
+    stuID integer,
+    stuName varchar(40),
+    stuPassword varchar(250),
+    stuAddress varchar(100),
+    cellNumber integer,
+    constraint student_id_pk primary key (stuID)
+);
+
+insert into Student3 
+values (11, 'Ethan Lee', 'newpassword123', '3456 Main St, New York, NY', 1112223333);
+
+insert into Student3 
+values (12, 'Liam Kim', 'qwertyuiop', '9876 Park Ave, Chicago, IL', 4445556666);
+
+insert into Student3 
+values (13, 'Peter Khadka', 'newuser123', '1234 Broadway, Los Angeles, CA', 7778889999);
+
+insert into Student3 
+values (14, 'Sophia Hall', 'password1234', '5678 Oak St, Houston, TX', 2223334444);
+
+insert into Student3 
+values (15, 'Logan Davis', 'newpass123', '9012 Maple St, Phoenix, AZ', 6667778888);
+
+/* CREATE Student4 Table */
+CREATE TABLE Student4 
+(
+    stuID integer,
+    stuName varchar(40),
+    stuPassword varchar(250),
+    stuAddress varchar(100),
+    cellNumber integer,
+    constraint student_id_pk primary key (stuID)
+);
+
+insert into Student4 
+values (16, 'Alexander White', 'newpassword456', '6789 Fifth Ave, New York, NY', 9991112222);
+
+insert into Student4 
+values (17, 'Julia Martin', 'qwertyasdfg', '2345 Grand St, San Antonio, TX', 6667778888);
+
+insert into Student4 
+values (18, 'Daniel Patel', 'newuser789', '4567 Oak St, Las Vegas, NV', 3334445555);
+
+insert into Student4 
+values (19, 'Sophia Hall', 'password5678', '8901 Main St, New York, NY', 7778889999);
+
+insert into Student4 
+values (20, 'Gabriel Lewis', 'newpass234', '1234 Broadway, Portland, OR', 4445556666);
+
+/* CREATE Student5 Table */
+CREATE TABLE Student5 
+(
+    stuID integer,
+    stuName varchar(40),
+    stuPassword varchar(250),
+    stuAddress varchar(100),
+    cellNumber integer,
+    constraint student_id_pk primary key (stuID)
+);
+insert into Student5 
+values (21, 'Elijah Davis', 'password123', '123 Main St, Chicago, IL', 5556667777);
+
+insert into Student5 
+values (22, 'Ava Morales', 'newuser123', '456 Elm St, Caldwell, NJ', 2223334444);
+
+insert into Student5 
+values (23, 'Liam Chen', 'qwertyuiop', '789 Oak St, Phoenix, AZ', 8889991111);
+
+insert into Student5 
+values (24, 'Emily Patel', 'newpassword123', '901 Maple St, San Francisco, CA', 6667778888);
+
+insert into Student5 
+values (25, 'Oliver Brown', 'newpass123', '2345 Park Ave, Los Angeles, CA', 3334445555);
+
+
+
+/* Creating Instructor Table */
+
+/* Creating Instructor Table1 */
+CREATE TABLE Instructor1
+(
+  instructorID1 integer,
+  instructorName varchar(40),
+  instructorQual varchar(250),
+  instructorAddress varchar(100),
+  instructorDepartment varchar(100),
+  constraint instructor_instructorID1_pk primary key(instructorID1)
+);
+
+
+insert into Instructor1
 values (1, 'John Mill', 'Masters in Mathematics', '121 Bloomfield Ave, Newark, NJ', 'Mathematics');
 
-insert into Instructor
+
+insert into Instructor1
 values (2, 'Joanna Gaines', 'Masters in Biology', '12 St. James Place, Montclair, NJ', 'Biology');
 
 
-insert into Instructor
+insert into Instructor1
 values (3, 'William Sanchez', 'Masters in Physics', '99 Martin Ave, Caldwell, NJ', 'Physics');
 
 
-insert into Instructor
+insert into Instructor1
 values (4, 'Brianna Levine', 'Bachelor in Computer Information Systems', '89 1st Street, Roseville, NJ', 'Computer Science');
 
 
-insert into Instructor
+insert into Instructor1
 values (5, 'Pricsilla Monroe', 'PHD in History', '120 Bloomfield Ave, Caldwell, NJ', 'History');
+
+
+/* Creating Instructor Table2 */
+CREATE TABLE Instructor2
+(
+  instructorID2 integer,
+  instructorName varchar(40),
+  instructorQual varchar(250),
+  instructorAddress varchar(100),
+  instructorDepartment varchar(100),
+  constraint instructor_instructorID2_pk primary key(instructorID2)
+);
+insert into Instructor2
+values (6, 'Jerry Booker', 'Masters in Biology', '90 Bloomfield Ave, Newark, NJ', 'Biology');
+
+
+insert into Instructor2
+values (7, 'Devin Walker', 'Masters in Chemisty', '90 Franklin Ave, Newark, NJ', 'Chemistry');
+
+
+insert into Instructor2
+values (8, 'Tori Deal', 'PHD in Chemisty', '90 Wrigjht St, Bloomfield, NJ', 'Chemistry');
+
+
+insert into Instructor2
+values (9, 'Devin James', 'Masters in Arts', '93 Franklin Ave, Newark, NJ', 'Graphic Design');
+
+
+insert into Instructor2
+values (10, 'James White', 'PHD in Chemical Engineering', '90 Franklin Ave, Newark, NJ', 'Chemistry');
+
+
+/* Creating Instructor Table3 */
+CREATE TABLE Instructor3
+(
+  instructorID3 integer,
+  instructorName varchar(40),
+  instructorQual varchar(250),
+  instructorAddress varchar(100),
+  instructorDepartment varchar(100),
+  constraint instructor_instructorID3_pk primary key(instructorID3)
+);
+
+insert into Instructor3
+values (11, 'James Wright', 'Masters in Chemical Engineering', '199 Grand Ave, Montclair, NJ', 'Chemistry');
+
+
+insert into Instructor3
+values (12, 'Walter Garcia', 'PHD in Mathematics', '97 Franklin Ave, Newark, NJ', 'Mathematics');
+
+
+insert into Instructor3
+values (13, 'Trent Arnold', 'Bachelors in Chemical Engineering', '138 N. 9th St, Montclair, NJ', 'Chemistry');
+
+
+insert into Instructor3
+values (14, 'Mohammed Garcia', 'PHD in Bussiness', '90 MLK Ave, Newark, NJ', 'Bussiness');
+
+
+insert into Instructor3
+values (15, 'James Zeas', 'Bachelors in Bussiness', '9 N. 9th St, Newark, NJ', 'Bussiness');
+
+
+/* Creating Instructor Table4 */
+CREATE TABLE Instructor4
+(
+  instructorID4 integer,
+  instructorName varchar(40),
+  instructorQual varchar(250),
+  instructorAddress varchar(100),
+  instructorDepartment varchar(100),
+  constraint instructor_instructorID4_pk primary key(instructorID4)
+);
+
+
+insert into Instructor4
+values (16, 'James Garcia', 'Bachelors in Bussiness', '990 Boxer St, Union, NJ', 'Bussiness');
+
+
+insert into Instructor4
+values (17, 'Brandon Kline', 'Bachelors in Accounting', '90 N. 9th St, Newark, NJ', 'Accounting');
+
+
+insert into Instructor4
+values (18, 'Betty Zeas', 'PHD in Accounting', '90 N. 9th St, Newark, NJ', 'Accounting');
+
+
+insert into Instructor4
+values (19, 'Becky Zeas', 'Masters in Arts', '90 N. 9th St, Newark, NJ', 'Graphic Design');
+
+
+insert into Instructor4
+values (20, 'Jannice Zeas', 'Bachelors in Physics', '990 Boxer St, Union, NJ', 'Physics');
+
+
+/* Creating Instructor Table5 */
+CREATE TABLE Instructor5
+(
+  instructorID5 integer,
+  instructorName varchar(40),
+  instructorQual varchar(250),
+  instructorAddress varchar(100),
+  instructorDepartment varchar(100),
+  constraint instructor_instructorID5_pk primary key(instructorID5)
+);
+
+
+insert into Instructor5
+values (21, 'Jannice Riley', 'Bachelors in Physics', '990 West St, Union, NJ', 'Physics');
+
+
+insert into Instructor5
+values (22, 'Zach Kruger', 'Masters in Arts', '125 Boxer St, Newark, NJ', 'Graphic Design');
+
+
+insert into Instructor5
+values (23, 'Riley Beth', 'PHD in Geology', '9 Baxter Av, Union, NJ', 'Geology');
+
+
+insert into Instructor5
+values (24, 'Jannice Kline', 'Masters in Geology', '187 Ranker Av, Newark, NJ', 'Geology');
+
+
+insert into Instructor5
+values (25, 'Tara Sanchez', 'Bachelors in Physics', '163  Boston St, NYC, NY', 'Physics');
 
 
 /* Creating Courses Table */
@@ -136,9 +396,11 @@ insert into Courses
 values (5, 'Psychology 201', 'Intermediate level psychology course', 'Intermediate', 'Joanna Gaines');
 
 
-/* CREATE Assessment Table  */
 
-CREATE TABLE Assessment (
+
+
+/* CREATE Assessment1 Table  */
+CREATE TABLE Assessment1 (
  assessmentID integer,
  courseID integer,
  title varchar(255),
@@ -149,20 +411,133 @@ CREATE TABLE Assessment (
  constraint courseID_fk foreign key (courseID) references Courses(courseID)
 );
 
-insert into  Assessment 
-values (1001, 1, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+insert into  Assessment1 
+values (1, 1, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
 
 insert into  Assessment
-values  (1002, 2, 'Mid-Term',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
+values  (2, 2, 'Mid-Term',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
 
-insert into  Assessment 
-values (1003, 3, 'Quiz Basics' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+insert into  Assessment1 
+values (3, 3, 'Quiz Basics' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
 
-insert into  Assessment
-values  (1004, 4, 'Mid-Term Basics',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
+insert into  Assessment1
+values  (4, 4, 'Mid-Term Basics',60,TO_DATE('2024/05/20', 'yyyy/mm/dd'),'00:60:00');
 
-insert into  Assessment
-values (1005, 5, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+insert into  Assessment1
+values (5, 5, 'Quiz' , 60, TO_DATE('2024/05/20', 'yyyy/mm/dd'), '00:60:00');
+
+/* CREATE Assessment2 Table  */
+
+CREATE TABLE Assessment2 (
+ assessmentID integer,
+ courseID integer,
+ title varchar(255),
+ passingScore integer,
+ dueDate Date,
+ assessmentTime varchar(255),
+ constraint assessment_assessmentID_pk primary key(assessmentID),
+ constraint courseID_fk foreign key (courseID) references Courses(courseID)
+);
+
+insert into Assessment2 
+values (6, 1, 'Final Exam', 70, TO_DATE('2024/06/15', 'yyyy/mm/dd'), '01:30:00');
+
+insert into Assessment2 
+values (7, 2, 'Project Submission', 60, TO_DATE('2024/06/10', 'yyyy/mm/dd'), '02:00:00');
+
+insert into Assessment2 
+values (8, 3, 'Lab Test', 70, TO_DATE('2024/06/05', 'yyyy/mm/dd'), '01:00:00');
+
+insert into Assessment2 
+values (9, 4, 'Research Paper', 60, TO_DATE('2024/06/12', 'yyyy/mm/dd'), '02:30:00');
+
+insert into Assessment2 
+values (10, 5, 'Group Presentation', 70, TO_DATE('2024/06/08', 'yyyy/mm/dd'), '01:15:00');
+
+
+/* CREATE Assessment3 Table  */
+
+CREATE TABLE Assessment3 (
+ assessmentID integer,
+ courseID integer,
+ title varchar(255),
+ passingScore integer,
+ dueDate Date,
+ assessmentTime varchar(255),
+ constraint assessment_assessmentID_pk primary key(assessmentID),
+ constraint courseID_fk foreign key (courseID) references Courses(courseID)
+);
+
+insert into Assessment3 
+values (11, 1, 'Assignment 1', 40, TO_DATE('2024/07/01', 'yyyy/mm/dd'), '00:30:00');
+
+insert into Assessment3 
+values (12, 2, 'Mid-Term Exam', 50, TO_DATE('2024/07/15', 'yyyy/mm/dd'), '01:00:00');
+
+insert into Assessment3 
+values (13, 3, 'Lab Assignment', 60, TO_DATE('2024/07/08', 'yyyy/mm/dd'), '00:45:00');
+
+insert into Assessment3 
+values (14, 4, 'Research Assignment', 70, TO_DATE('2024/07/22', 'yyyy/mm/dd'), '01:15:00');
+
+insert into Assessment3 
+values (15, 5, 'Final Project', 60, TO_DATE('2024/07/29', 'yyyy/mm/dd'), '02:00:00');
+
+/* CREATE Assessment4 Table  */
+
+CREATE TABLE Assessment4 (
+ assessmentID integer,
+ courseID integer,
+ title varchar(255),
+ passingScore integer,
+ dueDate Date,
+ assessmentTime varchar(255),
+ constraint assessment_assessmentID_pk primary key(assessmentID),
+ constraint courseID_fk foreign key (courseID) references Courses(courseID)
+);
+
+insert into Assessment4 
+values (16, 1, 'Quiz 1', 30, TO_DATE('2024/08/05', 'yyyy/mm/dd'), '00:20:00');
+
+insert into Assessment4 
+values (17, 2, 'Group Discussion', 40, TO_DATE('2024/08/12', 'yyyy/mm/dd'), '00:40:00');
+
+insert into Assessment4 
+values (18, 3, 'Lab Test 2', 50, TO_DATE('2024/08/19', 'yyyy/mm/dd'), '01:00:00');
+
+insert into Assessment4 
+values (19, 4, 'Research Paper 2', 60, TO_DATE('2024/08/26', 'yyyy/mm/dd'), '02:00:00');
+
+insert into Assessment4 
+values (20, 5, 'Final Exam 2', 70, TO_DATE('2024/09/02', 'yyyy/mm/dd'), '02:30:00');
+
+/* CREATE Assessment3 Table  */
+
+CREATE TABLE Assessment5 (
+ assessmentID integer,
+ courseID integer,
+ title varchar(255),
+ passingScore integer,
+ dueDate Date,
+ assessmentTime varchar(255),
+ constraint assessment_assessmentID_pk primary key(assessmentID),
+ constraint courseID_fk foreign key (courseID) references Courses(courseID)
+);
+
+insert into Assessment5 
+values (21, 1, 'Assignment 3', 40, TO_DATE('2024/09/10', 'yyyy/mm/dd'), '00:30:00');
+
+insert into Assessment5 
+values (22, 2, 'Mid-Term 2', 60, TO_DATE('2024/09/17', 'yyyy/mm/dd'), '01:00:00');
+
+insert into Assessment5 
+values (23, 3, 'Lab Assignment 2', 40, TO_DATE('2024/09/12', 'yyyy/mm/dd'), '00:40:00');
+
+insert into Assessment5 
+values (24, 4, 'Research Project', 75, TO_DATE('2024/09/24', 'yyyy/mm/dd'), '01:15:00');
+
+insert into Assessment5 
+values (25, 5, 'Final Assessment', 60, TO_DATE('2024/10/01', 'yyyy/mm/dd'), '02:00:00');
 
 
 /* Creating Payment Table */
@@ -203,7 +578,7 @@ CREATE Table Classes(
 
 
 ALTER TABLE Classes ADD CONSTRAINT stu_classes_fk foreign key (stuID) references Student1(stuID);
-ALTER TABLE Classes ADD CONSTRAINT inst_classes_fk foreign key (instructorID) references Instructor(instructorID);
+ALTER TABLE Classes ADD CONSTRAINT inst_classes_fk foreign key (instructorID) references Instructor1(instructorID);
 
 
 CREATE Table StudentRecord(    
@@ -214,7 +589,7 @@ CREATE Table StudentRecord(
 
 
 ALTER TABLE StudentRecord ADD CONSTRAINT stu_studentrecord_fk foreign key (stuID) references Student1(stuID);
-ALTER TABLE StudentRecord ADD CONSTRAINT assment_studentrecord_fk foreign key (assessmentID) references Assessment(assessmentID);
+ALTER TABLE StudentRecord ADD CONSTRAINT assment_studentrecord_fk foreign key (assessmentID) references Assessment1(assessmentID);
 
 
 CREATE table Rating(
@@ -225,33 +600,8 @@ CREATE table Rating(
 
 
 ALTER TABLE Rating ADD CONSTRAINT stu_rating_fk foreign key (stuID) references Student1(stuID);
-ALTER TABLE Rating ADD CONSTRAINT course_rating_fk foreign key (courseID) references Courses(courseID);
+ALTER TABLE Rating ADD CONSTRAINT course_rating_fk foreign key (courseID) references Courses1(courseID);
 
-
-
-
-
------------------------------------------------------------------------------------------------
-
--- All Students - Anuj 
-
-
-
-
--- All Instructor -  Pavel
-
-
-
-
--- Courses - Resha
-
-
-
--- Assessment - Suman
-
-
-
--- Invoice - Unish
 
 -- creating invoice1 table
 CREATE TABLE Invoice1
